@@ -2,20 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Personas Heridas de Transporte</title>
+    <title>Pokemon Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
+    <header class="container-fluid">
       <div>
-        <h1>Personas Heridas de Transporte</h1>
+        <a href="index.html"><img src="img/pokemon_logo.png" alt="logo pokemon go"></a>
       </div>
-    </div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
+    </header>
+    <nav class="container-fluid">
+      <div>
+        <select>
+          <option>Selecciona un tipo de Pokemon</option>
+          <option value="Water">Agua</option>
+          <option value="Bug">Bicho</option>
+          <option value="Dragon">Dragón</option>
+          <option value="Electric">Eléctrico</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Fire">Fuego</option>
+          <option value="Ice">Hielo/option>
+          <option value="Fighting">Lucha</option>
+          <option value="Normal">Normal</option>
+          <option value="Grass">Hierba</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Rock">Roca</option>
+          <option value="Ground">Tierra</option>
+          <option value="Poison">Veneno</option>
+          <option value="Flying">Volador</option>
+        </select>
+      </div>
+    </nav>
+    <section class="container-fluid">
+      <!--Aquí se llamará a cada pokemon-->
+      <div>
+        <ul id="pokemon-list">
+          
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+    
+    </footer>
+    <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
