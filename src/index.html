@@ -15,7 +15,7 @@
     </header>
     <nav class="container-fluid">
       <div>
-        <select>
+        <select class="pokemon-type" id="pokemon-type">
           <option>Selecciona un tipo de Pokemon</option>
           <option value="Water">Agua</option>
           <option value="Bug">Bicho</option>
@@ -23,7 +23,7 @@
           <option value="Electric">Eléctrico</option>
           <option value="Ghost">Fantasma</option>
           <option value="Fire">Fuego</option>
-          <option value="Ice">Hielo/option>
+          <option value="Ice">Hielo</option>
           <option value="Fighting">Lucha</option>
           <option value="Normal">Normal</option>
           <option value="Grass">Hierba</option>
@@ -37,15 +37,16 @@
     </nav>
     <section class="container-fluid">
       <!--Aquí se llamará a cada pokemon-->
-      <div>
+      <div class="pokemon col-md-3 col-sm-3 col-xs-6">
         <ul id="pokemon-list">
-          
+
         </ul>
       </div>
     </section>
 
+
     <footer>
-    
+
     </footer>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
