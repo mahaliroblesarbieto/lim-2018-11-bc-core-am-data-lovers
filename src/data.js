@@ -1,17 +1,24 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-/*const example = () => {
-  return 'example';
-};
-
-window.example = example;*/
-
 window.POKEMON  = POKEMON;
-const containerlist = document.getElementById("pokemon-list");
-let list  = '';
-POKEMON.pokemon.forEach((pokemones)  =>  {
-  const li  = `<li>${pokemones.name}</li>`  + `<img src="${pokemones.img}">`;
-  list  = list  + li;
-})
-containerlist.innerHTML = list;
+const amountOfPokemon  = window.POKEMON.pokemon.length;
+//console.log(amountOfPokemon);
+//let nameOfPokemones  =  [];
+function filterTypeOfPokemon(typePokemonValue){
+  let listOfIdPokemonType = [];
+for(let i = 0;  i < amountOfPokemon;  i++){
+//console.log(window.POKEMON.pokemon[i].name);
+//console.log(window.POKEMON.pokemon[i].type.length);
+let lengthTypePokemon = window.POKEMON.pokemon[i].type.length;
+for(let j = 0;  j < lengthTypePokemon; j++){
+//console.log(window.POKEMON.pokemon[i].type[j]);
+let typeOfPokemon = window.POKEMON.pokemon[i].type[j];
+if(typeOfPokemon  == typePokemonValue){
+//console.log(window.POKEMON.pokemon[i].name);
+listOfIdPokemonType.push(window.POKEMON.pokemon[i].id);
+}
+}
+}
+return  listOfIdPokemonType;
+}
