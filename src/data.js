@@ -1,24 +1,32 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
 window.POKEMON  = POKEMON;
-const amountOfPokemon  = window.POKEMON.pokemon.length;
-//console.log(amountOfPokemon);
-//let nameOfPokemones  =  [];
+function filterData(data,condition){
+  switch (data) {
+    case 'type':
+      return filterTypeOfPokemon(condition);
+      break;
+    case 'egg':
+      return filterEggOfPokemon(condition);
+      break;
+    default:
+  }
+}
+
+const pokemonLength  = window.POKEMON.pokemon.length;
 function filterTypeOfPokemon(typePokemonValue){
-  let listOfIdPokemonType = [];
-for(let i = 0;  i < amountOfPokemon;  i++){
-//console.log(window.POKEMON.pokemon[i].name);
-//console.log(window.POKEMON.pokemon[i].type.length);
-let lengthTypePokemon = window.POKEMON.pokemon[i].type.length;
-for(let j = 0;  j < lengthTypePokemon; j++){
-//console.log(window.POKEMON.pokemon[i].type[j]);
-let typeOfPokemon = window.POKEMON.pokemon[i].type[j];
-if(typeOfPokemon  == typePokemonValue){
-//console.log(window.POKEMON.pokemon[i].name);
-listOfIdPokemonType.push(window.POKEMON.pokemon[i].id);
+  let listIdPokemonType = [];
+  for(let i = 0;  i < pokemonLength;  i++){
+    let lengthTypePokemon = window.POKEMON.pokemon[i].type.length;
+    for(let j = 0;  j < lengthTypePokemon; j++){
+      let typeOfPokemon = window.POKEMON.pokemon[i].type[j];
+      if(typeOfPokemon  == typePokemonValue){
+        listIdPokemonType.push(window.POKEMON.pokemon[i].id);
+      }
+    }
+  }
+  return  listIdPokemonType;
 }
-}
-}
-return  listOfIdPokemonType;
+
+function filterEggOfPokemon(eggPokemonValue){
+  const arrFilter = window.POKEMON.pokemon.filter(compare  =>  (compare.egg  ==  eggPokemonValue));
+  return arrFilter;
 }
