@@ -30,3 +30,4 @@ function filterEggOfPokemon(eggPokemonValue){
   const arrFilter = window.POKEMON.pokemon.filter(compare  =>  (compare.egg  ==  eggPokemonValue));
   return arrFilter;
 }
+
