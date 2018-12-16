@@ -43,7 +43,21 @@ const orderPokemon = document.getElementById('pokemon-order');
 orderPokemon.addEventListener('change', () =>  {
   const arrPokemon = window.POKEMON.pokemon;
   const orderPokemonValue = orderPokemon.value;
-  const orderPokemonName = sortData(arrPokemon,'name',orderPokemonValue);
+  let order;
+  switch (orderPokemonValue) {
+    case 'number':
+    order = 'asc';
+      break;
+    case 'name-one':
+    order = 'asc';
+      break;
+    case 'name-two':
+    order = 'desc';
+      break;
+    default:
+  }
+
+  const orderPokemonName = sortData(arrPokemon,orderPokemonValue,order);
   let showPokemonOrder = '';
   for(let i = 0;  i < orderPokemonName.length;  i++){
    showPokemonOrder += '<article class="col-md-3 col-sm-4 col-xs-6">' +

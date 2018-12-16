@@ -22,14 +22,19 @@ function filterEggOfPokemon(eggPokemonValue){
 }
 function sortData(data,sortBy,condition){
   let listPokemonOrder = [];
-  switch (sortBy) {
-    case 'name':
+  switch (condition) {
+    case 'asc':
+    if(sortBy == 'number'){
+      listPokemonOrder = data.sort((a, b) => (a.id > b.id ? 1 : -1));
+      return listPokemonOrder;
+    }else{
       listPokemonOrder = data.sort((a, b) => (a.name > b.name ? 1 : -1));
-      if(condition == 'asc'){
-        return listPokemonOrder;
-      }else{
-        return listPokemonOrder.reverse();
-      }
+      return listPokemonOrder;
+    }
+      break;
+    case 'desc':
+    listPokemonOrder = data.sort((a, b) => (a.name > b.name ? 1 : -1));
+    return listPokemonOrder.reverse();
       break;
     default:
   }
