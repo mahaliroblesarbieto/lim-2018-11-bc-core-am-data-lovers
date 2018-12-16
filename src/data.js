@@ -1,4 +1,5 @@
 window.POKEMON  = POKEMON;
+const pokemonLength  = window.POKEMON.pokemon.length;
 function filterData(data,condition){
   switch (data) {
     case 'type':
@@ -10,23 +11,26 @@ function filterData(data,condition){
     default:
   }
 }
-
-const pokemonLength  = window.POKEMON.pokemon.length;
 function filterTypeOfPokemon(typePokemonValue){
   let listIdPokemonType = [];
-  for(let i = 0;  i < pokemonLength;  i++){
-    let lengthTypePokemon = window.POKEMON.pokemon[i].type.length;
-    for(let j = 0;  j < lengthTypePokemon; j++){
-      let typeOfPokemon = window.POKEMON.pokemon[i].type[j];
-      if(typeOfPokemon  == typePokemonValue){
-        listIdPokemonType.push(window.POKEMON.pokemon[i].id);
-      }
-    }
-  }
+  listIdPokemonType = window.POKEMON.pokemon.filter(compare  =>  (compare.type[0]  ==  typePokemonValue || compare.type[1]  ==  typePokemonValue || compare.type[2]  ==  typePokemonValue));
   return  listIdPokemonType;
 }
-
 function filterEggOfPokemon(eggPokemonValue){
   const arrFilter = window.POKEMON.pokemon.filter(compare  =>  (compare.egg  ==  eggPokemonValue));
   return arrFilter;
+}
+function sortData(data,sortBy,condition){
+  let listPokemonOrder = [];
+  switch (sortBy) {
+    case 'name':
+      listPokemonOrder = data.sort((a, b) => (a.name > b.name ? 1 : -1));
+      if(condition == 'asc'){
+        return listPokemonOrder;
+      }else{
+        return listPokemonOrder.reverse();
+      }
+      break;
+    default:
+  }
 }
