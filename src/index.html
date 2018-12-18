@@ -15,52 +15,54 @@
     </header>
     <div class="content container-fluid">
       <div class="row">
-        <nav class="col-md-3 col-sm-2 col-xs-12">
-          <div class="navegador">
-            <div>
-              <h4>Ordenar</h4>
-            </div>
-            <div class="row">
-              <select class="type-select" id="pokemon-order">
-                <option value="number"># de Pokedex</option>
-                <option value="name-one">De A - Z</option>
-                <option value="name-two">De Z - A</option>
-              </select>
-            </div>
-            <div>
-              <h4>Filtro de Pokemons</h4>
-            </div>
-            <div class="row">
-              <select class="type-select" id="pokemon-type">
-                <option>Por tipo</option>
-                <option value="Water">Agua</option>
-                <option value="Bug">Bicho</option>
-                <option value="Dragon">Dragón</option>
-                <option value="Electric">Eléctrico</option>
-                <option value="Ghost">Fantasma</option>
-                <option value="Fire">Fuego</option>
-                <option value="Ice">Hielo</option>
-                <option value="Fighting">Lucha</option>
-                <option value="Normal">Normal</option>
-                <option value="Grass">Hierba</option>
-                <option value="Psychic">Psíquico</option>
-                <option value="Rock">Roca</option>
-                <option value="Ground">Tierra</option>
-                <option value="Poison">Veneno</option>
-                <option value="Flying">Volador</option>
-              </select>
-            </div>
-            <div class="row">
-              <select class="type-select" id="pokemon-egg">
-                <option>Por Huevo</option>
-                <option value="Not in Eggs">No en huevo</option>
-                <option value="2 km">Huevo 2 km</option>
-                <option value="5 km">Huevo 5 km</option>
-                <option value="10 km">Huevo 10 km</option>
-              </select>
-            </div>
-          </div>
-        </nav>
+        <div class="col-md-3 col-sm-2 col-xs-12">
+            <nav class="col-md-12">
+              <div class="navegador">
+                <div>
+                  <h4>Ordenar</h4>
+                </div>
+                <div class="row">
+                  <select class="type-select" id="pokemon-order">
+                    <option value="number"># de Pokedex</option>
+                    <option value="name-one">De A - Z</option>
+                    <option value="name-two">De Z - A</option>
+                  </select>
+                </div>
+                <div>
+                  <h4>Filtro de Pokemons</h4>
+                </div>
+                <div class="row">
+                  <select class="type-select" id="pokemon-type">
+                    <option>Por tipo</option>
+                    <option value="Water">Agua</option>
+                    <option value="Bug">Bicho</option>
+                    <option value="Dragon">Dragón</option>
+                    <option value="Electric">Eléctrico</option>
+                    <option value="Ghost">Fantasma</option>
+                    <option value="Fire">Fuego</option>
+                    <option value="Ice">Hielo</option>
+                    <option value="Fighting">Lucha</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Grass">Hierba</option>
+                    <option value="Psychic">Psíquico</option>
+                    <option value="Rock">Roca</option>
+                    <option value="Ground">Tierra</option>
+                    <option value="Poison">Veneno</option>
+                    <option value="Flying">Volador</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <select class="type-select" id="pokemon-egg">
+                    <option>Por Huevo</option>
+                    <option value="Not in Eggs">No en huevo</option>
+                    <option value="2 km">Huevo 2 km</option>
+                    <option value="5 km">Huevo 5 km</option>
+                    <option value="10 km">Huevo 10 km</option>
+                  </select>
+                </div>
+              </div>
+            </nav>
+        </div>
         <section  class="col-md-9 col-sm-10 col-xs-12 ">
           <div id="pokemon-list">
             <!--Aquí se va mostrar imagen, nombre y numero que se esta llamando a partir de main.js -->
@@ -68,9 +70,6 @@
         </section>
       </div>
     </div>
-    <footer>
-
-    </footer>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
