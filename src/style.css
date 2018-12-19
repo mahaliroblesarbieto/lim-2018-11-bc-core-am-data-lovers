@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 body {
 	background: url("img/bg.jpg") no-repeat center center fixed;
+	background-attachment: fixed;
 	background-size: cover;
 	font-family: 'Lato', sans-serif;
 	margin: 0 auto;
@@ -12,7 +13,7 @@ header {
 
 header img {
 	margin: 15px 0 15px 0;
-	width: 12%;
+	width: 150px;
 }
 
 .content {
@@ -46,7 +47,9 @@ h4 {
 	margin-bottom: 10px;
 }
 
-
+section{
+	padding: 0 !important;
+}
 
 .pokemon {
 	height: 200px;
@@ -64,9 +67,6 @@ h3{
 	font-size: 18px;
 }
 
-
-
-
 @media only screen and (max-width: 414px){
 	#pokemon-list{
 		margin-top: 30px;
@@ -74,3 +74,6 @@ h3{
 	}
 
 }
+
+
+
