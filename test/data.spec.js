@@ -1,23 +1,28 @@
 require('../src/data.js');
 
+const input = 
+[
+  {id: 1, "num": "001", "name": "Bulbasaur", "type": [
+    "Grass",
+    "Poison"]
+  },
+  {"id": 4, "num": "004", "name": "Charmander", "type": [
+      "Fire"]
+  },
+  {"id": 7, "num": "007", "name": "Squirtle", "type": [
+      "Water"]
+  },
+];
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('pokemon', () => {
+  it('Debería ser un objeto', () => {
+    expect(typeof pokemon).toBe('object');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  describe('pokemon.filterData', () => {
+    it('Debería ser una función', () => {
+      expect(typeof window.pokemon.filterData).toBe('function');
+    });
+    it('Debería retornar un array de objetos, con la propiedad type' , () => {
+      expect();
+    });
   });
-});
-
-describe('pokemon.sortData', () => {
-  it('Debería ser una función', () => {
-    expect(typeof pokemon.sortData).toBe('function');
-  });
-  it('debería retornar un array de objetos, con el valor de la propiedad name en mayusculas', () => {
-    expect(potter.cambiarPropiedad(input)).toEqual(output);
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
