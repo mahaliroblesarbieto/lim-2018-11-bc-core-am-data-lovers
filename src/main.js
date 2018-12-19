@@ -7,7 +7,7 @@ for (let i = 0; i < 151; i++) {
   let name = pokemonData[i].name;
   showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
     '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-    '<img src="' + imagen + '<h3>' + name + '</h3>' +
+    '<img src="' + imagen + '" border="1" >' + '<h3>' + name + '</h3>' +
     '</div>' + '</article>';
 }
 document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
@@ -21,7 +21,7 @@ typePokemon.addEventListener('change', () => {
   for (let i = 0; i < arrListOfIdPokemonType.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
       '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + arrListOfIdPokemonType[i].img + '<h3>' + arrListOfIdPokemonType[i].name + '</h3>' +
+      '<img src="' + arrListOfIdPokemonType[i].img + '" border="1">' + '<h3>' + arrListOfIdPokemonType[i].name + '</h3>' +
       '</div>' + '</article>';
   }
   document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
@@ -36,7 +36,7 @@ eggPokemon.addEventListener('change', () => {
   for (let i = 0; i < arrPokemonEgg.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
       '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + arrPokemonEgg[i].img + '<h3>' + arrPokemonEgg[i].name + '</h3>' +
+      '<img src="' + arrPokemonEgg[i].img + '" border="1">' + '<h3>' + arrPokemonEgg[i].name + '</h3>' +
       '</div>' + '</article>';
   }
   document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
@@ -65,7 +65,7 @@ orderPokemon.addEventListener('change', () => {
   for (let i = 0; i < orderPokemonName.length; i++) {
     showPokemonOrder += '<article class="col-md-3 col-sm-4 col-xs-6">' +
       '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + orderPokemonName[i].img + '<h3>' + orderPokemonName[i].name + '</h3>' +
+      '<img src="' + orderPokemonName[i].img + '" border="1">' + '<h3>' + orderPokemonName[i].name + '</h3>' +
       '</div>' + '</article>';
   }
   document.getElementById('pokemon-list').innerHTML = showPokemonOrder;
