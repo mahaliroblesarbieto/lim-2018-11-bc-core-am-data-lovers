@@ -55,7 +55,7 @@ describe('pokemon.sortData', () => {
   it('Debería retornar un array de objetos con los nombres de los pokemon ordenado de la A a la Z', () => {
     expect(window.pokemon.sortData(input, 'name-one', 'asc')).toEqual(ouput2);
   });
-  it('Debería retornar un array de objetos con los nombres de los pokemon ordenado de la A a la Z', () => {
+  it('Debería retornar un array de objetos con los nombres de los pokemon ordenado de la Z a la A', () => {
     expect(window.pokemon.sortData(input, 'name-two', 'desc')).toEqual(ouput3);
   });
 });
