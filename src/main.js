@@ -14,9 +14,10 @@ document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
 
 const typePokemon = document.getElementById('pokemon-type');
 typePokemon.addEventListener('change', () => {
-  const typeData = 'type';
+  const typeData = window.POKEMON.pokemon;
+  const typeofFilter = 'Tipo';
   const typePokemonValue = typePokemon.value;
-  const arrListOfIdPokemonType = pokemon.filterData(typeData, typePokemonValue);
+  const arrListOfIdPokemonType = pokemon.filterData(typeData, typeofFilter, typePokemonValue);
   let showPokemonFilter = '';
   for (let i = 0; i < arrListOfIdPokemonType.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -29,9 +30,12 @@ typePokemon.addEventListener('change', () => {
 
 const eggPokemon = document.getElementById('pokemon-egg');
 eggPokemon.addEventListener('change', () => {
-  const typeData = 'egg';
+  const typeData = window.POKEMON.pokemon;
+  const typeofFilter = 'Huevo';
   const eggPokemonValue = eggPokemon.value;
-  const arrPokemonEgg = pokemon.filterData(typeData, eggPokemonValue);
+  console.log(typePokemon.value);
+  const arrTemp = pokemon.filterData(typeData, typeofFilter, eggPokemonValue);
+  const arrPokemonEgg = pokemon.filterData(arrTemp, 'Tipo', typePokemon.value)
   let showPokemonFilter = '';
   for (let i = 0; i < arrPokemonEgg.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
