@@ -33,6 +33,17 @@ const ouput3 =
   {'id': 1, 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'egg': '2 km'}, 
 ];
 
+const ouput4 = 
+[
+  {'id': 4, 'name': 'Charmander', 'type': ['Fire'], 'egg': '2 km'},  
+];
+
+const ouput5 = 
+[
+  {'id': 1, 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'egg': '2 km'},
+  {'id': 4, 'name': 'Charmander', 'type': ['Fire'], 'egg': '2 km'}, 
+];
+
 describe('pokemon', () => {
   it('Debería ser un objeto', () => {
     expect(typeof pokemon).toBe('object');
@@ -42,6 +53,12 @@ describe('pokemon', () => {
 describe('pokemon.filterData', () => {
   it('Debería ser una función', () => {
     expect(typeof window.pokemon.filterData).toBe('function');
+  });
+  it('Debería retornar un array de objetos con los pokemones que sean de tipo Fuego', () => {
+    expect(window.pokemon.filterData(input, 'Tipo', 'Fire')).toEqual(ouput4);
+  });
+  it('Debería retornar un array de objetos con los pokemones que se encuentren en Huevos de 2 km', () => {
+    expect(window.pokemon.filterData(input, 'Huevo', '2 km')).toEqual(ouput5);
   });
 });
 
