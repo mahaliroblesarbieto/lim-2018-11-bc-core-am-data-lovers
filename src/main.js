@@ -36,6 +36,7 @@ eggPokemon.addEventListener('change', () => {
   console.log(typePokemon.value);
   const arrTemp = pokemon.filterData(typeData, typeofFilter, eggPokemonValue);
   const arrPokemonEgg = pokemon.filterData(arrTemp, 'Tipo', typePokemon.value)
+  const arrPokemonEgg = pokemon.filterData(typeData, typeofFilter, eggPokemonValue);
   let showPokemonFilter = '';
   for (let i = 0; i < arrPokemonEgg.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
