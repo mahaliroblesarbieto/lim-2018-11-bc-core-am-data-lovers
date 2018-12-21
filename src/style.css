@@ -75,5 +75,32 @@ h3{
 
 }
 
+.type-input {
+	border: 1px solid #2B4D86;
+	border-radius: 5px;
+	color: #2B4D86;
+	margin-bottom: 10px;
+	padding: 10px 5px 10px 5px;
+	width: 100%;
+}
 
+.type-button {
+	background: #2B4D86;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 10px 5px 10px 5px;
+	width: 100%;
+}
+
+.pokemon-evolution {
+	background: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
+	color: #2B4D86;
+	font-size: 20px;
+	height: 400px;
+	margin-bottom: 30px;
+	width: 100%;
+}
 
