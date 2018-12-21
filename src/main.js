@@ -1,6 +1,6 @@
 const pokemonData = window.POKEMON.pokemon;
 
-const pokemon = window.pokemon;
+const pokemonFunction = window.pokemonFunction;
 let showPokemonFilter = '';
 for (let i = 0; i < 151; i++) {
   let imagen = pokemonData[i].img;
@@ -17,8 +17,8 @@ typePokemon.addEventListener('change', () => {
   const typeData = window.POKEMON.pokemon;
   const typeofFilter = 'Tipo';
   const typePokemonValue = typePokemon.value;
-  const arrTemp = pokemon.filterData(typeData, typeofFilter, typePokemonValue);
-  const arrListOfIdPokemonType = pokemon.filterData(arrTemp, 'Huevo', eggPokemon.value);
+  const arrTemp = pokemonFunction.filterData(typeData, typeofFilter, typePokemonValue);
+  const arrListOfIdPokemonType = pokemonFunction.filterData(arrTemp, typeofFilter, typePokemon.value);
   let showPokemonFilter = '';
   for (let i = 0; i < arrListOfIdPokemonType.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -34,8 +34,8 @@ eggPokemon.addEventListener('change', () => {
   const typeData = window.POKEMON.pokemon;
   const typeofFilter = 'Huevo';
   const eggPokemonValue = eggPokemon.value;
-  const arrTemp = pokemon.filterData(typeData, typeofFilter, eggPokemonValue);
-  const arrPokemonEgg = pokemon.filterData(arrTemp, 'Tipo', typePokemon.value);
+  const arrTemp = pokemonFunction.filterData(typeData, typeofFilter, eggPokemonValue);
+  const arrPokemonEgg = pokemonFunction.filterData(arrTemp, 'Tipo', typePokemon.value);
   let showPokemonFilter = '';
   for (let i = 0; i < arrPokemonEgg.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -64,7 +64,7 @@ orderPokemon.addEventListener('change', () => {
   default:
   }
 
-  const orderPokemonName = pokemon.sortData(arrPokemon, orderPokemonValue, order);
+  const orderPokemonName = pokemonFunction.sortData(arrPokemon, orderPokemonValue, order);
   let showPokemonOrder = '';
   for (let i = 0; i < orderPokemonName.length; i++) {
     showPokemonOrder += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -73,4 +73,24 @@ orderPokemon.addEventListener('change', () => {
       '</div>' + '</article>';
   }
   document.getElementById('pokemon-list').innerHTML = showPokemonOrder;
+});
+
+const namePokemon = document.getElementById('enter-text');
+const candyCount = document.getElementById('enter-number');
+document.getElementById('button-calculate').addEventListener('click', () => {
+  const namePokemonValue = namePokemon.value;
+  const arrFilter2 = window.POKEMON.pokemon.filter(compare => (compare.name === namePokemonValue));
+  const candyCountValue = parseInt(candyCount.value);
+  const dataPokemon = window.POKEMON.pokemon;
+  const candyCountMissing = pokemonFunction.computeStats(dataPokemon, namePokemonValue, candyCountValue);
+  const arrFilter3 = window.POKEMON.pokemon.filter(compare => (compare.name === arrFilter2[0].next_evolution[0].name));
+   
+  let pokemonEvolution = '<center>' +
+   '<div class="pokemon_evolution ">' +
+   '<img src="' + arrFilter2[0].img + '" border="1">' + '<h3> A tu ' + arrFilter2[0].name + ' le falta ' + candyCountMissing + ' caramelos para evolucionar a :</h3>' +
+   '<img src="' + arrFilter3[0].img + '" border="1">' +
+   '<h3> ' + arrFilter2[0].next_evolution[0].name + '</h3>' +
+   '</div>' + '</center>';
+
+  document.getElementById('pokemon-list').innerHTML = pokemonEvolution;
 });

@@ -30,7 +30,14 @@ function sortData(data, sortBy, condition) {
   return listPokemonOrder;
 }
 
-window.pokemon = {
+function computeStats(data, condition, count) {
+  const nameFilter = data.filter(compare => (compare.name === condition));
+  const newCandy = nameFilter[0].candy_count - count;
+  return newCandy;
+}
+
+window.pokemonFunction = {
   filterData,
   sortData,
+  computeStats,
 };
