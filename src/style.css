@@ -72,19 +72,6 @@ section{
 	margin-bottom: 30px;
 }
 
-.pokemon_evolution {
-	height: 400px;
-	width: 500px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
-	color: #2B4D86;
-	float: center;
-	font-size: 20px;
-	text-align: center;
-	margin-bottom: 30px;
-}
-
 h3{
 	font-size: 18px;
 }
