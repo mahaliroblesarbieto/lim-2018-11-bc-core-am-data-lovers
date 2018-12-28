@@ -38,14 +38,18 @@
 -    Se realizaron los prototipos de alta fidelidad, tomando en cuenta los prototipos de baja fidelidad.
 
 6.	¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
+
      El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokemones que se encuentran en el juego pokemonGo. 
 
 
 ## Historias de usuario
 
 ### Historia 1
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Filtrar los tipos de Pokemon
+
 PARA: Saber que pokemones hay según el tipo.
 
 CRITERIOS DE ACEPTACIÓN
@@ -56,8 +60,11 @@ CRITERIOS DE ACEPTACIÓN
 - Debe ser responsive.
 
 ### Historia 2
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Filtrar los pokemones según el tipo de huevo
+
 PARA: Poder saber que pokemones puedo obtener según el tipo de huevo.
 
 CRITERIOS DE ACEPTACIÓN
@@ -68,8 +75,11 @@ CRITERIOS DE ACEPTACIÓN
 - Debe ser responsive.
 
 ### Historia 3
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Ordenar a los pokemones según su número de pokedex
+
 PARA: Poder ubicar facilmente al pokemon del que quiero saber más sobre sus habilidades.
 
 CRITERIOS DE ACEPTACIÓN
@@ -80,8 +90,11 @@ CRITERIOS DE ACEPTACIÓN
 - Debe ser responsive.
 
 ### Historia 4
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Ordenar a los pokemones según el orden alfabético de la A-Z.
+
 PARA: Poder ubicar facilmente al pokemon del que quiero saber más sobre sus habilidades.
 
 CRITERIOS DE ACEPTACIÓN
@@ -92,8 +105,11 @@ CRITERIOS DE ACEPTACIÓN
 - Debe ser responsive.
 
 ### Historia 5
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Ordenar a los pokemones según el orden alfabetico de la Z-A.
+
 PARA: Poder ubicar facilmente al pokemon del que quiero saber más sobre sus habilidades.
 
 CRITERIOS DE ACEPTACIÓN
@@ -104,8 +120,11 @@ CRITERIOS DE ACEPTACIÓN
 - Debe ser responsive.
 
 ### Historia 6
+
 COMO: Jugador de Pokemon Go
+
 QUIERO: Calcular cuantos caramelos le falta a mi pokemon para evolucionar
+
 PARA: Saber cuantos caramelos le falta a mi pokemon para evolucionar, y en que pokemon evoluciona.
 
 CRITERIOS DE ACEPTACIÓN
@@ -133,11 +152,11 @@ CRITERIOS DE ACEPTACIÓN
 
 * *TERCER PROTOTIPO*
 
- ![Sin titulo](prototipo3.png)
+ ![Sin titulo](prototipo3.jpeg)
 
  Versión móvil
 
- ![Sin titulo](prototipo4.png)
+ ![Sin titulo](prototipo4.jpeg)
 
  Versión tablet y escritorio.
 
@@ -159,8 +178,8 @@ Testeo de segundo prototipo de baja fidelidad:
 
 Testeo de tercer prototipo de baja fidelidad:
 
-- El usuario solicitó poder separaralospokemonespor tipo o huevo.
-- Adicionalmente pidió poder ordenar a los pokemones por # de Pokedex, de la A-Z y Z-A.
+- Fue a partir de este prototipo que se comenzó a trabajar en el primer sprint
+- En el testeo el usuario pidió poder ordenar a los pokemones por # de Pokedex, de la A-Z y Z-A.
 - Por último poder calcular la cantidad de caramelos que le faltaban a su Pokemon.
 
 
