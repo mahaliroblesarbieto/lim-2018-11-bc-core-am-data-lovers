@@ -170,6 +170,16 @@ CRITERIOS DE ACEPTACIÓN
 
  Versión tablet y escritorio.
 
+* *QUINTO PROTOTIPO*
+
+ ![Sin titulo](prototipo7.jpeg)
+
+ Versión móvil
+
+ ![Sin titulo](prototipo8.jpeg)
+
+ Versión tablet y escritorio.
+
 
 ## Prototipo de alta fidelidad o Diseño de la interfaz de usuario
    Link a Zeplin
