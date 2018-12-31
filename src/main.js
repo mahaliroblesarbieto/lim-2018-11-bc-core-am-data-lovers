@@ -1,6 +1,5 @@
-const pokemonData = window.POKEMON.pokemon;
-
-const pokemon = window.pokemon;
+const pokemonData = window.POKEMON.pokemon
+const pokemonFunction = window.pokemonFunction;
 let showPokemonFilter = '';
 for (let i = 0; i < 151; i++) {
   let imagen = pokemonData[i].img;
@@ -14,10 +13,10 @@ document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
 
 const typePokemon = document.getElementById('pokemon-type');
 typePokemon.addEventListener('change', () => {
-  const typeData = window.POKEMON.pokemon;
+  typePokemon.options[0].disabled = true;
   const typeofFilter = 'Tipo';
   const typePokemonValue = typePokemon.value;
-  const arrListOfIdPokemonType = pokemon.filterData(typeData, typeofFilter, typePokemonValue);
+  const arrListOfIdPokemonType = pokemonFunction.filterData(pokemonData, typeofFilter, typePokemonValue);
   let showPokemonFilter = '';
   for (let i = 0; i < arrListOfIdPokemonType.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -30,11 +29,10 @@ typePokemon.addEventListener('change', () => {
 
 const eggPokemon = document.getElementById('pokemon-egg');
 eggPokemon.addEventListener('change', () => {
-  const typeData = window.POKEMON.pokemon;
+  eggPokemon.options[0].disabled = true;
   const typeofFilter = 'Huevo';
   const eggPokemonValue = eggPokemon.value;
-  const arrTemp = pokemon.filterData(typeData, typeofFilter, eggPokemonValue);
-  const arrPokemonEgg = pokemon.filterData(arrTemp, 'Tipo', typePokemon.value);
+  const arrPokemonEgg = pokemonFunction.filterData(pokemonData, typeofFilter, eggPokemonValue);
   let showPokemonFilter = '';
   for (let i = 0; i < arrPokemonEgg.length; i++) {
     showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
@@ -47,7 +45,6 @@ eggPokemon.addEventListener('change', () => {
 
 const orderPokemon = document.getElementById('pokemon-order');
 orderPokemon.addEventListener('change', () => {
-  const arrPokemon = pokemonData;
   const orderPokemonValue = orderPokemon.value;
   let order;
   switch (orderPokemonValue) {
@@ -62,8 +59,7 @@ orderPokemon.addEventListener('change', () => {
     break;
   default:
   }
-
-  const orderPokemonName = pokemon.sortData(arrPokemon, orderPokemonValue, order);
+  const orderPokemonName = pokemonFunction.sortData(pokemonData, orderPokemonValue, order);
   let showPokemonOrder = '';
   for (let i = 0; i < orderPokemonName.length; i++) {
     showPokemonOrder += '<article class="col-md-3 col-sm-4 col-xs-6">' +
