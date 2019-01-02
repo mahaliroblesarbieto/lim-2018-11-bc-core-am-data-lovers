@@ -6,21 +6,21 @@
 * [Historias de usuario](#Historias-de-usuario)
 * [Prototipo de baja fidelidad o Sketch](#Prototipo-de-baja-fidelidad-o-Sketch)
 * [Prototipo de alta fidelidad o Diseño de la interfaz de usuario](#Prototipo-de-alta-fidelidad-o-Diseño-de-la-interfaz-de-usuario)
-* [Prototipo de alta fidelidad o Diseño de la interfaz de usuario](#Prototipo-de-alta-fidelidad-o-Diseño-de-la-interfaz-de-usuario)
 * [Test de usabilidad](#Test-de-usabilidad)
 
 ***
 
 ## Definición del producto
-1.   ¿Quiénes son los principales usuarios de producto?
+
+1. ¿Quiénes son los principales usuarios de producto?
 
 Jugadores habituales de Pokémon Go.
 
-2.   ¿Cuáles son los objetivos de los usuarios?
+2. ¿Cuáles son los objetivos de los usuarios?
 
 Obtener información específica sobre los pokémon que se encuentran en el juego.
 
-3.   ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
 - Tipos de pokémon.
 - Que pokémon se puede obtener según el tipo de huevo.
@@ -28,11 +28,13 @@ Obtener información específica sobre los pokémon que se encuentran en el jueg
 - Poder ordenar los pokémon según número de Pokédex.
 - Poder ordenar los pokémon según orden alfabético de A-Z y Z-A.
 
-4.   ¿Cuándo utilizan o utilizarían el producto?
+
+
+4. ¿Cuándo utilizan o utilizarían el producto?
 
 Cuando quieran obtener información de un pokémon en específico.
 
-5.   ¿Cómo fue el proceso de diseño?
+5. ¿Cómo fue el proceso de diseño?
 
 -    Se eligió, con que data ibamos a trabajar, en este caso elegimos la data de Pokémon.
 -    Se eligió quienes serán los principales usuarios del producto, para ello se procedió a revisar qué información tenía la data de Pokémon, cuando se revisó la data nos dimos cuenta que la información que tenía era sobre el juego Pokémon Go en específico, por ello se decidió que nuestros usuarios serían los jugadores de Pokémon Go. 
@@ -41,10 +43,9 @@ Cuando quieran obtener información de un pokémon en específico.
 -    Se realizaron los prototipos de baja fidelidad según las Historias de Usuario.
 -    Se realizaron los prototipos de alta fidelidad, tomando en cuenta los prototipos de baja fidelidad.
 
-6.   ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
+5. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
 
-El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokémon que se encuentran en el juego Pokémon Go. 
-
+El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokémon que se encuentran en el juego Pokémon Go.
 
 ## Historias de usuario
 
@@ -148,27 +149,27 @@ CRITERIOS DE ACEPTACIÓN
 
 ## Prototipo de baja fidelidad o Sketch
 
-* *PRIMER PROTOTIPO*: Versión móvil, tablet y escritorio
+*PRIMER PROTOTIPO*: Versión móvil, tablet y escritorio
 
  ![Sin titulo](src/img/prototipo1.jpeg)
 
-* *SEGUNDO PROTOTIPO*: Versión móvil, tablet y escritorio
+*SEGUNDO PROTOTIPO*: Versión móvil, tablet y escritorio
 
  ![Sin titulo](src/img/prototipo2.jpeg)
  
-* *TERCER PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
+*TERCER PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
 
  ![Sin titulo](src/img/prototipo3.jpeg)
 
  ![Sin titulo](src/img/prototipo4.jpeg)
 
-* *CUARTO PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
+*CUARTO PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
 
  ![Sin titulo](src/img/prototipo5.jpg)
 
  ![Sin titulo](src/img/prototipo6.jpg)
 
-* *QUINTO PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
+*QUINTO PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
 
  ![Sin titulo](src/img/(prototipo7.jpeg)
 
@@ -179,31 +180,31 @@ CRITERIOS DE ACEPTACIÓN
 
 [Zeplin](https://zpl.io/VkwpyJ8)
 
-* *INICIO*
+*INICIO*
 
  ![Sin titulo](src/img/1-home.png)
 
-* *SELECT ORDENAR*
+*SELECT ORDENAR*
 
  ![Sin titulo](src/img/2-home-ordenar.png)
 
-* *BUSCADOR*
+*BUSCADOR*
 
  ![Sin titulo](src/img/3-pokemon-buscador.png)
 
-* *SELECT TIPO DE POKÉMON*
+*SELECT TIPO DE POKÉMON*
 
  ![Sin titulo](src/img/4-pokemon-type.png)
 
-* *SELECT TIPO DE HUEVO*
+*SELECT TIPO DE HUEVO*
 
  ![Sin titulo](src/img/5-pokemon-huevo.png)
 
-* *CALCULAR CARAMELOS*
+*CALCULAR CARAMELOS*
 
  ![Sin titulo](src/img/6-pokemon-caramelos.png)
 
-* *ESTADÍSTICA DE DEBILIDADES*
+*ESTADÍSTICA DE DEBILIDADES*
 
  ![Sin titulo](src/img/7-pokemon-debilidades.png)
 
