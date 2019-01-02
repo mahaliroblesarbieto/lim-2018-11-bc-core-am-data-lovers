@@ -107,7 +107,7 @@ h3{
 
 .type-input {
 	border: 1px solid #2B4D86;
-	border-radius: 5px;
+	border-radius: 19.9px;
 	color: #2B4D86;
 	margin-bottom: 10px;
 	padding: 10px 5px 10px 5px;
@@ -145,3 +145,101 @@ h3{
   margin-bottom: 25px;
 }
 
+
+
+.footer {
+    background-color: #378B7D;
+    background: linear-gradient(to right, #639d25, #427768);
+    color: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px 0 30px;
+    text-align: center;
+}
+
+footer li{
+  list-style: none;
+}
+
+footer ul li img{
+  width: 30px;
+}
+
+footer ul:first-child{
+  float: right;
+}
+
+footer .col-md-5 li:first-child img{
+	width: 60px !important;
+}
+
+footer .col-md-5 li:nth-child(2) img{
+	margin-top: 15%;
+}
+
+footer .col-md-5 li:last-child img{
+	margin-top: 7%;
+}
+
+footer .col-md-5 li img{
+	width: 150px;
+}
+
+footer .col-md-7 li{
+	margin-top: 3%;
+}
+
+ul.footer-links {
+    border-top: 1px solid white;
+}
+
+li.footer-links-item {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+li.footer-links-item:after {
+    content: '';
+    height: 12px;
+    width: 1px;
+    background: white;
+    display: block;
+    position: relative;
+    right: 0;
+    top: -15px;
+}
+
+li.footer-links-item:first-child:after{
+	display: none;
+}
+
+.footer-links-item a {
+    color: white;
+    padding: 20px;
+}
+
+
+
+@media only screen and (max-width: 767px){
+  section{
+    margin-top: 30px;
+  }
+
+  footer ul:first-child{
+  float: none;
+  }
+
+  li.col-md-1 {
+    display: inline;
+ }
+
+ footer .col-md-5 li:nth-child(2) img{
+	margin-top: 3%;
+}
+
+footer .col-md-5 li:last-child img {
+    margin-top: 2%;
+}
+
+
+}
