@@ -14,7 +14,6 @@ document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
 const typePokemon = document.getElementById('pokemon-type');
 typePokemon.addEventListener('change', () => {
   document.getElementById('pokemon-list').classList.remove('min-heigth-table');
-  typePokemon.options[0].disabled = true;
   const typeofFilter = 'Tipo';
   const typePokemonValue = typePokemon.value;
   const arrListOfIdPokemonType = pokemonFunction.filterData(pokemonData, typeofFilter, typePokemonValue);
@@ -31,7 +30,6 @@ typePokemon.addEventListener('change', () => {
 const eggPokemon = document.getElementById('pokemon-egg');
 eggPokemon.addEventListener('change', () => {
   document.getElementById('pokemon-list').classList.remove('min-heigth-table');
-  eggPokemon.options[0].disabled = true;
   const typeofFilter = 'Huevo';
   const eggPokemonValue = eggPokemon.value;
   const arrPokemonEgg = pokemonFunction.filterData(pokemonData, typeofFilter, eggPokemonValue);

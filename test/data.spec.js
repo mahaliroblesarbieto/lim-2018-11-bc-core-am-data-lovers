@@ -52,6 +52,16 @@ const input2 =
   {'id': 4, 'name': 'Charmander', 'type': ['Fire'], 'egg': '2 km', 'candy_count': 25}
 ];
 
+const input3 =
+[
+  {'id': 1, 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'weaknesses': ['Fire', 'Ice', 'Flying', 'Psychic']},
+  {'id': 2, 'name': 'Ivysaur', 'type': ['Grass', 'Poison'], 'weaknesses': ['Fire', 'Ice', 'Flying', 'Psychic']},
+  {'id': 3, 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'weaknesses': ['Fire', 'Ice', 'Flying', 'Psychic']},
+  {'id': 4, 'name': 'Charmander', 'type': ['Fire'], 'weaknesses': ['Water', 'Ground', 'Rock']}
+];
+
+const input4 = ['Fire'];
+
 describe('pokemon', () => {
   it('Debería ser un objeto', () => {
     expect(typeof pokemonFunction).toBe('object');
@@ -91,5 +101,14 @@ describe('pokemonFunction.computeStats', () => {
   });
   it('Debería retornar la cantidad de caramelos que necesita Bulbasaur para evolucionar a Ivisaur', () => {
     expect(window.pokemonFunction.computeStats(input2, 'Bulbasaur', 10)).toEqual(15);
+  });
+});
+
+describe('pokemonFunction.stats', () => {
+  it('Debería ser una función', () => {
+    expect(typeof window.pokemonFunction.stats).toBe('function');
+  });
+  it('Debería retornar el promedio de debilidades de los pokemone de tipo Fuego', () => {
+    expect(window.pokemonFunction.stats(input3, input4)).toEqual([3]);
   });
 });
