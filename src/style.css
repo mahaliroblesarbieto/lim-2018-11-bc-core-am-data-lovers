@@ -5,19 +5,28 @@ body {
 	background-size: cover;
 	font-family: 'Lato', sans-serif;
 	margin: 0 auto;
+	width: 100%;
 }
 
 header {
 	text-align: center;
 }
 
-header img {
+.img-logo {
 	margin: 15px 0 15px 0;
-	width: 150px;
+	width: 118px;
+	height: 75px;
 }
 
 .content {
 	margin-top: 20px;
+}
+
+.line{
+	width: 230px;
+	height: 1px;
+	opacity: 0.5;
+	background-color: #2b4d86;
 }
 
 nav {
@@ -33,8 +42,18 @@ nav {
 }
 
 h4 {
-	color: #2B4D86;
+
+	height: 13px;
+	font-family: Lato;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 2.14;
+	letter-spacing: normal;
 	text-align: left;
+	color: #2b4d86;
+	margin-bottom: 25px;
 }
 
 .type-input {
@@ -49,11 +68,11 @@ h4 {
 .type-select {
 	background: #2B4D86;
 	border: none;
-	border-radius: 5px;
 	color: #ffffff;
 	padding: 10px 5px 10px 5px;
 	width: 100%;
 	margin-bottom: 10px;
+	border-radius: 19.9px;
 }
 
 section{
@@ -63,23 +82,12 @@ section{
 .pokemon {
 	height: 200px;
 	background-color: #ffffff;
+	border: 0;
+    outline: 0;
 	border-radius: 5px;
 	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
 	color: #2B4D86;
 	float: left;
-	font-size: 20px;
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-.pokemon_evolution {
-	height: 400px;
-	width: 500px;
-	background-color: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
-	color: #2B4D86;
-	float: center;
 	font-size: 20px;
 	text-align: center;
 	margin-bottom: 30px;
@@ -97,5 +105,43 @@ h3{
 
 }
 
+.type-input {
+	border: 1px solid #2B4D86;
+	border-radius: 5px;
+	color: #2B4D86;
+	margin-bottom: 10px;
+	padding: 10px 5px 10px 5px;
+	width: 100%;
+	text-align: left;
+}
 
+.type-button {
+	color: #fff;
+    background: linear-gradient(to right, #24CCAA, #A2DB95);
+    border-radius: 5px;
+	border: 0;
+	outline: 0;
+	padding: 10px 5px 10px 5px;
+	width: 100%;
+}
+
+.pokemon-evolution {
+	background: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
+	color: #2B4D86;
+	font-size: 20px;
+	height: 400px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.type-ordenar{
+  width: 300px;
+  height: 40px;
+  opacity: 0.5;
+  border-radius: 19.9px;
+  float: right;
+  margin-bottom: 25px;
+}
 
