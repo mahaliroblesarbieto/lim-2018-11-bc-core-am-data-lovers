@@ -243,3 +243,7 @@ footer .col-md-5 li:last-child img {
 
 
 }
+.min-heigth-table {
+	max-height: 50vh;
+	width: 100%;
+}
