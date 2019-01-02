@@ -103,8 +103,7 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
   google.charts.load('current', {packages: ['corechart', 'bar']});
   google.charts.setOnLoadCallback(drawBasic);
 
-  function drawBasic (){
-
+  function drawBasic() {
     const data = google.visualization.arrayToDataTable([
       ['Tipo de Pokémon', 'Promedio de Debilidades', {role: 'style'}],
       ['Roca', arrPromedioSortReverse[0], 'color: #414449'],
@@ -128,24 +127,20 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
       title: 'Promedio de debilidades por tipo de Pokémon de mayor a menor',
       chartArea: {width: '80%'},
       hAxis: {
-        viewWindowMode:'explicit',
-            viewWindow: {
-              max:5.5,
-              min:0
-            }
-        },
-        vAxis: {
-          title: 'Tipos de Pokémon'
-          
-        },
-        legend: {position: 'none'}
-      };
+        viewWindowMode: 'explicit',
+        viewWindow: {
+          max: 5.5,
+          min: 0
+        }
+      },
+      vAxis: {
+        title: 'Tipos de Pokémon'  
+      },
+      legend: {position: 'none'}
+    };
 
-      var chart = new google.visualization.BarChart(document.getElementById('pokemon-list'));
-      document.getElementById('pokemon-list').classList.add('min-heigth-table');
-
-      chart.draw(data, options);
-    }
-
-
+    const chart = new google.visualization.BarChart(document.getElementById('pokemon-list'));
+    document.getElementById('pokemon-list').classList.add('min-heigth-table');
+    chart.draw(data, options);
+  }
 });
