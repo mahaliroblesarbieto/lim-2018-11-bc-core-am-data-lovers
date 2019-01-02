@@ -12,15 +12,15 @@
 ***
 
 ## Definición del producto
-1. ¿Quiénes son los principales usuarios de producto?
+1.   ¿Quiénes son los principales usuarios de producto?
 
 Jugadores habituales de Pokémon Go.
 
-2. ¿Cuáles son los objetivos de los usuarios?
+2.   ¿Cuáles son los objetivos de los usuarios?
 
 Obtener información específica sobre los pokémon que se encuentran en el juego.
 
-3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+3.   ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
 - Tipos de pokémon.
 - Que pokémon se puede obtener según el tipo de huevo.
@@ -28,11 +28,11 @@ Obtener información específica sobre los pokémon que se encuentran en el jueg
 - Poder ordenar los pokémon según número de Pokédex.
 - Poder ordenar los pokémon según orden alfabético de A-Z y Z-A.
 
-4. ¿Cuándo utilizan o utilizarían el producto?
+4.   ¿Cuándo utilizan o utilizarían el producto?
 
 Cuando quieran obtener información de un pokémon en específico.
 
-5. ¿Cómo fue el proceso de diseño?
+5.   ¿Cómo fue el proceso de diseño?
 
 -    Se eligió, con que data ibamos a trabajar, en este caso elegimos la data de Pokémon.
 -    Se eligió quienes serán los principales usuarios del producto, para ello se procedió a revisar qué información tenía la data de Pokémon, cuando se revisó la data nos dimos cuenta que la información que tenía era sobre el juego Pokémon Go en específico, por ello se decidió que nuestros usuarios serían los jugadores de Pokémon Go. 
@@ -41,7 +41,7 @@ Cuando quieran obtener información de un pokémon en específico.
 -    Se realizaron los prototipos de baja fidelidad según las Historias de Usuario.
 -    Se realizaron los prototipos de alta fidelidad, tomando en cuenta los prototipos de baja fidelidad.
 
-6. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
+6.   ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
 
 El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokémon que se encuentran en el juego Pokémon Go. 
 
