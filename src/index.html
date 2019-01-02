@@ -6,28 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="chart_div"></div>
   </head>
   <body>
-    <header class="container-fluid">
-      <div>
-        <a href="index.html"><img src="img/pokemon_logo.png" alt="logo pokemon go"></a>
-      </div>
-    </header>
     <div class="content container-fluid">
       <div class="row">
         <div class="col-md-3 col-sm-2 col-xs-12">
             <nav class="col-md-12">
               <div class="navegador">
-                <div class="row">
-                  <h4>Ordenar Pokemones</h4>
-                </div>
-                <div class="row">
-                  <select class="type-select" id="pokemon-order">
-                    <option value="number"># de Pokedex</option>
-                    <option value="name-one">Nombre de A - Z</option>
-                    <option value="name-two">Nombre de Z - A</option>
-                  </select>
-                </div>
+                  <div>
+                    <a href="index.html"><img class="img-logo" src="img/pokemon_logo.png" alt="logo pokemon go"></a>
+                  </div>
+                  <div class="line"></div>
+               
                 <div class="row">
                   <h4>FILTRAR POKEMONES</h4>
                 </div>
@@ -60,6 +52,13 @@
                     <option value="10 km">Huevo 10 km</option>
                   </select>
                 </div>
+                
+                <div class="row">
+                  <h4>ESTADÍSTICAS</h4>
+                </div>
+                <div class="row">
+                  <button class="type-select" type="button" id="button-weaknesses">Promedio de Debilidades</button>
+                </div>
                 <div class="row">
                   <h4>CALCULAR CARAMELOS</h4>
                 </div>
@@ -76,7 +75,18 @@
              </nav>
         </div>
         <section  class="col-md-9 col-sm-10 col-xs-12 ">
-          <div id="pokemon-list">
+           
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <select class="type-ordenar" id="pokemon-order">
+                  <option value="" disabled selected>Ordenar por:</option>
+                  <option value="number"># de Pokedex</option>
+                  <option value="name-one">Nombre de A - Z</option>
+                  <option value="name-two">Nombre de Z - A</option>
+                </select>
+            </div>
+        </section>
+        <section  class="col-md-9 col-sm-10 col-xs-12 ">
+          <div id="pokemon-list" style=" height: 500px;">
             <!--Aquí se va mostrar imagen, nombre y numero que se esta llamando a partir de main.js -->
           </div>
         </section>
