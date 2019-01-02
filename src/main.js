@@ -13,6 +13,7 @@ document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
 
 const typePokemon = document.getElementById('pokemon-type');
 typePokemon.addEventListener('change', () => {
+  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   typePokemon.options[0].disabled = true;
   const typeofFilter = 'Tipo';
   const typePokemonValue = typePokemon.value;
@@ -29,6 +30,7 @@ typePokemon.addEventListener('change', () => {
 
 const eggPokemon = document.getElementById('pokemon-egg');
 eggPokemon.addEventListener('change', () => {
+  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   eggPokemon.options[0].disabled = true;
   const typeofFilter = 'Huevo';
   const eggPokemonValue = eggPokemon.value;
@@ -45,6 +47,7 @@ eggPokemon.addEventListener('change', () => {
 
 const orderPokemon = document.getElementById('pokemon-order');
 orderPokemon.addEventListener('change', () => {
+  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   const orderPokemonValue = orderPokemon.value;
   let order;
   switch (orderPokemonValue) {
@@ -73,6 +76,7 @@ orderPokemon.addEventListener('change', () => {
 const namePokemon = document.getElementById('enter-text');
 const candyCount = document.getElementById('enter-number');
 document.getElementById('button-calculate').addEventListener('click', () => {
+  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   const namePokemonValue = namePokemon.value;
   const arrFilter2 = window.POKEMON.pokemon.filter(compare => (compare.name === namePokemonValue));
   const candyCountValue = parseInt(candyCount.value);
@@ -91,41 +95,40 @@ document.getElementById('button-calculate').addEventListener('click', () => {
 });
 
 document.getElementById('button-weaknesses').addEventListener('click', () => {
-  const arrTypePokemon = ["Water","Bug","Dragon","Electric","Ghost","Fire","Ice","Fighting","Normal","Grass","Psychic","Rock","Ground","Poison","Flying"];
+  const arrTypePokemon = ['Water', 'Bug', 'Dragon', 'Electric', 'Ghost', 'Fire', 'Ice', 'Fighting', 'Normal', 'Grass', 'Psychic', 'Rock', 'Ground', 'Poison', 'Flying'];
   const arrPromedio2 = pokemonFunction.stats(pokemonData, arrTypePokemon);
   const arrPromedioSort = arrPromedio2.sort();
-const arrPromedioSortReverse = arrPromedioSort.reverse();
+  const arrPromedioSortReverse = arrPromedioSort.reverse();
 
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawBasic);
 
-function drawBasic() {
+  function drawBasic (){
 
-      var data = google.visualization.arrayToDataTable([
-        ['Tipo de Pokémon', 'Promedio de Debilidades', {role: 'style'}],
-        ['Roca', arrPromedioSortReverse[0], 'color: #414449'],
-        ['Hierba', arrPromedioSortReverse[1], 'color: #558720'],
-        ['Tierra', arrPromedioSortReverse[2], 'color: #671502'],
-        ['Hielo', arrPromedioSortReverse[3], 'color: #6c72f3'], 
-        ['Bicho', arrPromedioSortReverse[4], 'color: #16d45d'],
-        ['Psíquico', arrPromedioSortReverse[5], 'color: #af5ed9'],
-        ['Fantasma', arrPromedioSortReverse[6], 'color: #612baa'],
-        ['Dragón', arrPromedioSortReverse[7], 'color: #612baa'],
-        ['Veneno', arrPromedioSortReverse[8], 'color: #4d215e'],
-        ['Lucha', arrPromedioSortReverse[9], 'color: #fc1f1f'],
-        ['Fuego', arrPromedioSortReverse[10], 'color: #ff8400'],
-        ['Volador', arrPromedioSortReverse[11], 'color: #45a4a3'],
-        ['Agua', arrPromedioSortReverse[12], 'color: #a2def4'],
-        ['Eléctrico', arrPromedioSortReverse[13], 'color: #faf329'],
-        ['Normal', arrPromedioSortReverse[14], 'color: #a8aaae']
-        
-      ]);
+    const data = google.visualization.arrayToDataTable([
+      ['Tipo de Pokémon', 'Promedio de Debilidades', {role: 'style'}],
+      ['Roca', arrPromedioSortReverse[0], 'color: #414449'],
+      ['Hierba', arrPromedioSortReverse[1], 'color: #558720'],
+      ['Tierra', arrPromedioSortReverse[2], 'color: #671502'],
+      ['Hielo', arrPromedioSortReverse[3], 'color: #6c72f3'], 
+      ['Bicho', arrPromedioSortReverse[4], 'color: #16d45d'],
+      ['Psíquico', arrPromedioSortReverse[5], 'color: #af5ed9'],
+      ['Fantasma', arrPromedioSortReverse[6], 'color: #612baa'],
+      ['Dragón', arrPromedioSortReverse[7], 'color: #612baa'],
+      ['Veneno', arrPromedioSortReverse[8], 'color: #4d215e'],
+      ['Lucha', arrPromedioSortReverse[9], 'color: #fc1f1f'],
+      ['Fuego', arrPromedioSortReverse[10], 'color: #ff8400'],
+      ['Volador', arrPromedioSortReverse[11], 'color: #45a4a3'],
+      ['Agua', arrPromedioSortReverse[12], 'color: #a2def4'],
+      ['Eléctrico', arrPromedioSortReverse[13], 'color: #faf329'],
+      ['Normal', arrPromedioSortReverse[14], 'color: #a8aaae']  
+    ]);
 
-      var options = {
-        title: 'Promedio de debilidades por tipo de Pokémon de mayor a menor',
-        chartArea: {width: '80%'},
-        hAxis: {
-          viewWindowMode:'explicit',
+    const options = {
+      title: 'Promedio de debilidades por tipo de Pokémon de mayor a menor',
+      chartArea: {width: '80%'},
+      hAxis: {
+        viewWindowMode:'explicit',
             viewWindow: {
               max:5.5,
               min:0
@@ -139,6 +142,7 @@ function drawBasic() {
       };
 
       var chart = new google.visualization.BarChart(document.getElementById('pokemon-list'));
+      document.getElementById('pokemon-list').classList.add('min-heigth-table');
 
       chart.draw(data, options);
     }

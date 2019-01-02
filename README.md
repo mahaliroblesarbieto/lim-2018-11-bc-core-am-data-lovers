@@ -43,7 +43,7 @@ Cuando quieran obtener información de un pokémon en específico.
 -    Se realizaron los prototipos de baja fidelidad según las Historias de Usuario.
 -    Se realizaron los prototipos de alta fidelidad, tomando en cuenta los prototipos de baja fidelidad.
 
-5. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
+6. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
 
 El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokémon que se encuentran en el juego Pokémon Go.
 
@@ -171,7 +171,7 @@ CRITERIOS DE ACEPTACIÓN
 
 *QUINTO PROTOTIPO*: Versión móvil(1) y Versión tablet y escritorio(2)
 
- ![Sin titulo](src/img/(prototipo7.jpeg)
+ ![Sin titulo](src/img/prototipo7.jpeg)
 
  ![Sin titulo](src/img/prototipo8.jpeg)
 
