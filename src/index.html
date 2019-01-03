@@ -9,133 +9,120 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
-    <header class="container-fluid">
-      <div>
-        <h4>Dashboart</h4>   
-      </div>
-    </header>
     <div class="content container-fluid">
-      <div class="row">
-        <div class="col-md-3 col-sm-2 col-xs-12">
-            <nav class="col-md-12">
-              <div class="navegador">
-                  <div>
-                    <a href="index.html"><img class="img-logo" src="img/pokemon_logo.png" alt="logo pokemon go"></a>
-                  </div>
-                  <div class="line"></div>
-               
-                <div class="row">
-                  <h4>Filtrar Pokémon</h4>
-                </div>
-                <div class="row">
-                  <select class="type-select" id="pokemon-type">
-                    <option>Por tipo</option>
-                    <option value="Water">Agua</option>
-                    <option value="Bug">Bicho</option>
-                    <option value="Dragon">Dragón</option>
-                    <option value="Electric">Eléctrico</option>
-                    <option value="Ghost">Fantasma</option>
-                    <option value="Fire">Fuego</option>
-                    <option value="Ice">Hielo</option>
-                    <option value="Fighting">Lucha</option>
-                    <option value="Normal">Normal</option>
-                    <option value="Grass">Hierba</option>
-                    <option value="Psychic">Psíquico</option>
-                    <option value="Rock">Roca</option>
-                    <option value="Ground">Tierra</option>
-                    <option value="Poison">Veneno</option>
-                    <option value="Flying">Volador</option>
-                  </select>
-                </div>
-                <div class="row">
-                  <select class="type-select" id="pokemon-egg">
-                    <option>Por Huevo</option>
-                    <option value="Not in Eggs">No en huevo</option>
-                    <option value="2 km">Huevo 2 km</option>
-                    <option value="5 km">Huevo 5 km</option>
-                    <option value="10 km">Huevo 10 km</option>
-                  </select>
-                </div>
-                
-                <div class="row">
-                  <h4>Estadísticas</h4>
-                </div>
-                <div class="row">
-                  <button class="type-select" type="button" id="button-weaknesses">Promedio de Debilidades</button>
-                </div>
-                <div class="row">
-                  <h4>Calcular Caramelos</h4>
-                </div>
-                <div class="row">
-                  <input class="type-input" type="text" id="enter-text" placeholder="Ingresa nombre del Pokemon">
-                </div>
-                <div class="row">
-                  <input class="type-input" type="text" id="enter-number" placeholder="Ingresa # de caramelos">
-                </div>
-                <div class="row">
-                  <button class="type-select" type="button" id="button-calculate">Calcular</button>
-                </div>
+      <header>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <nav class="col-md-12">
+            <div class="navegador">
+              <div>
+                <a href="index.html"><img class="img-logo" src="img/pokemon_logo.png" alt="logo pokemon go"></a>
               </div>
-             </nav>
-        </div>
-        <section  class="col-md-9 col-sm-10 col-xs-12 ">
-           
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <select class="type-ordenar" id="pokemon-order">
-                  <option value="" disabled selected>Ordenar por:</option>
-                  <option value="number"># de Pokedex</option>
-                  <option value="name-one">Nombre de A - Z</option>
-                  <option value="name-two">Nombre de Z - A</option>
+              <div class="row line">
+                <h4>Filtrar Pokémon</h4>
+              </div>
+              <div class="row">
+                <select class="back type-select" id="pokemon-type">
+                  <option>Por tipo</option>
+                  <option value="Water">Agua</option>
+                  <option value="Bug">Bicho</option>
+                  <option value="Dragon">Dragón</option>
+                  <option value="Electric">Eléctrico</option>
+                  <option value="Ghost">Fantasma</option>
+                  <option value="Fire">Fuego</option>
+                  <option value="Ice">Hielo</option>
+                  <option value="Fighting">Lucha</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Grass">Hierba</option>
+                  <option value="Psychic">Psíquico</option>
+                  <option value="Rock">Roca</option>
+                  <option value="Ground">Tierra</option>
+                  <option value="Poison">Veneno</option>
+                  <option value="Flying">Volador</option>
                 </select>
+              </div>
+              <div class="row">
+                <select class="back type-select" id="pokemon-egg">
+                  <option>Por Huevo</option>
+                  <option value="Not in Eggs">No en huevo</option>
+                  <option value="2 km">Huevo 2 km</option>
+                  <option value="5 km">Huevo 5 km</option>
+                  <option value="10 km">Huevo 10 km</option>
+                </select>
+              </div>
+              <div class="row">
+                <h4>Estadísticas</h4>
+              </div>
+              <div class="row">
+                <button class="back type-button" type="button" id="button-weaknesses">Promedio de Debilidades</button>
+              </div>
+              <div class="row">
+                <h4>Calcular Caramelos</h4>
+              </div>
+              <div class="row">
+                <input class="back type-input" type="text" id="enter-text" placeholder="Ingresa nombre del Pokémon">
+              </div>
+              <div class="row">
+                <input class="back type-input" type="text" id="enter-number" placeholder="Ingresa número de caramelos">
+              </div>
+              <div class="row">
+                <button class="back type-button" type="button" id="button-calculate">Calcular</button>
+              </div>
             </div>
-        </section>
-        <section  class="col-md-9 col-sm-10 col-xs-12 ">
+          </nav>
+        </div>
+      </header>
+      <section class="col-md-9 col-sm-8 col-xs-12">
+        <div class="row">
           <div id="pokemon-list">
-            <!--Aquí se va mostrar imagen, nombre y numero que se esta llamando a partir de main.js -->
+            <!--Aquí se va mostrar imagen, nombre y numero que se esta llamando a partir de main.js-->
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
     <footer class="footer container-fluid">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="site-container">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="site-container">
+          <div>
             <div class="row">
-              <ul class="col-md-5">|
+              <ul class="col-md-5">
                 <li class="col-md-2">
                   <a href="http://www.nianticlabs.com">
                     <img src="img/niantic_logo.png" alt="">
                   </a>
-                </li>
+                </li>    
                 <li class="col-md-5">
                   <a href="http://www.pokemon.com/us/">
                     <img src="img/tpc_logo.png" alt="">
                   </a>
-                </li>
+                </li>    
                 <li class="col-md-5">
                   <a href="http://www.nintendo.com">
                     <img src="img/nintendo_logo.png" alt="">
                   </a>
-                </li>
-              </ul>
+                </li>    
+              </ul>     
+            </div>
+            <div class="row">
               <ul class="col-md-7">
                 <li class="col-md-1">
                   <a href="https://twitter.com/PokemonGoApp">
                     <img src="img/twitter_logo.png" alt="Twitter">
-                  </a>
-                </li>        
+                  </a>   
+                </li>          
                 <li class="col-md-1">
                   <a href="https://www.facebook.com/PokemonGO/">
                     <img src="img/facebook_logo.png" alt="Facebook">
                   </a>
-                </li>
+                </li>    
                 <li class="col-md-1">
                   <a href="https://plus.google.com/+pokemongo">
                     <img src="img/gplus_logo.png" alt="Google+">
-                  </a>         
-                </li>       
+                  </a>           
+                </li>     
               </ul>
-            </div>
+            </div>     
+          </div>
+          <div class="row">
             <ul class="footer-links">
               <li class="footer-links-item">
                 <a href="https://www.nianticlabs.com/terms/pokemongo/en">Terms of Service</a>
@@ -150,10 +137,10 @@
                 <a href="/en/faq/">FAQ</a>
               </li>
             </ul>
-            <div class="footer-copyright">
-              ©2018 Niantic, Inc. ©2018 Pokémon. ©1995-2018 Nintendo / Creatures Inc. / GAME FREAK inc.
-              <p>Los nombres de los personajes de Pokémon y Pokémon son marcas registradas de Nintendo. Durante el juego, ten en cuenta tu entorno y juega de forma segura.</p>
-            </div>
+          </div>
+          <div class="footer-copyright">
+            ©2018 Niantic, Inc. ©2018 Pokémon. ©1995-2018 Nintendo / Creatures Inc. / GAME FREAK inc.
+            <p>Los nombres de los personajes de Pokémon y Pokémon son marcas registradas de Nintendo. Durante el juego, ten en cuenta tu entorno y juega de forma segura.</p>
           </div>
         </div>
       </div>
@@ -163,3 +150,24 @@
     <script src="main.js"></script>
   </body>
 </html>
+
+
+
+    
+  <!--  
+        
+        <section  class="col-md-9 col-sm-10 col-xs-12">
+           
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <select class="type-ordenar" id="pokemon-order">
+                  <option value="" disabled selected>Ordenar por:</option>
+                  <option value="number"># de Pokedex</option>
+                  <option value="name-one">Nombre de A - Z</option>
+                  <option value="name-two">Nombre de Z - A</option>
+                </select>
+            </div>
+        </section>
+
+
+    -->
+    
