@@ -105,7 +105,8 @@ h3{
     font-size: 12px;
     line-height: 18px;
     padding: 10px 0 30px;
-    text-align: center;
+	text-align: center;
+	
 }
 
 footer li{
@@ -230,6 +231,6 @@ footer .col-md-5 li:last-child img {
 
 }
 .min-heigth-table {
-	max-height: 50vh;
-	width: 100%;
+	height: 500px;
+	width: 95%;
 }

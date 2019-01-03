@@ -1,49 +1,27 @@
 const pokemonData = window.POKEMON.pokemon;
 const pokemonFunction = window.pokemonFunction;
-let showPokemonFilter = '';
-for (let i = 0; i < 151; i++) {
-  let imagen = pokemonData[i].img;
-  let name = pokemonData[i].name;
-  showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
-    '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-    '<img src="' + imagen + '" border="1" >' + '<h3>' + name + '</h3>' +
-    '</div>' + '</article>';
-}
-document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
+
+document.getElementById('pokemon-list').innerHTML = template(pokemonData);
 
 const typePokemon = document.getElementById('pokemon-type');
 typePokemon.addEventListener('change', () => {
-  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
-  typePokemon.options[0].disabled = true;
-  const typeofFilter = 'Tipo';
-  const typePokemonValue = typePokemon.value;
-  const arrListOfIdPokemonType = pokemonFunction.filterData(pokemonData, typeofFilter, typePokemonValue);
-  let showPokemonFilter = '';
-  for (let i = 0; i < arrListOfIdPokemonType.length; i++) {
-    showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
-      '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + arrListOfIdPokemonType[i].img + '" border="1">' + '<h3>' + arrListOfIdPokemonType[i].name + '</h3>' +
-      '</div>' + '</article>';
-  }
-  document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
+  document.getElementById('pokemon-list').innerHTML = filterEvaluate('Tipo', typePokemon);
 });
 
 const eggPokemon = document.getElementById('pokemon-egg');
 eggPokemon.addEventListener('change', () => {
-  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
-  eggPokemon.options[0].disabled = true;
-  const typeofFilter = 'Huevo';
-  const eggPokemonValue = eggPokemon.value;
-  const arrPokemonEgg = pokemonFunction.filterData(pokemonData, typeofFilter, eggPokemonValue);
-  let showPokemonFilter = '';
-  for (let i = 0; i < arrPokemonEgg.length; i++) {
-    showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
-      '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + arrPokemonEgg[i].img + '" border="1">' + '<h3>' + arrPokemonEgg[i].name + '</h3>' +
-      '</div>' + '</article>';
-  }
-  document.getElementById('pokemon-list').innerHTML = showPokemonFilter;
+  document.getElementById('pokemon-list').innerHTML = filterEvaluate('Huevo', eggPokemon);
 });
+
+function filterEvaluate(typefilter, element) {
+  let templateHtml;
+  document.getElementById('pokemon-list').classList.remove('min-heigth-table');
+  const typeofFilter = typefilter;
+  const elementValue = element.value;
+  const arrPokemon = pokemonFunction.filterData(pokemonData, typeofFilter, elementValue);
+  templateHtml = template(arrPokemon);
+  return templateHtml;
+}
 
 const orderPokemon = document.getElementById('pokemon-order');
 orderPokemon.addEventListener('change', () => {
@@ -63,14 +41,7 @@ orderPokemon.addEventListener('change', () => {
   default:
   }
   const orderPokemonName = pokemonFunction.sortData(pokemonData, orderPokemonValue, order);
-  let showPokemonOrder = '';
-  for (let i = 0; i < orderPokemonName.length; i++) {
-    showPokemonOrder += '<article class="col-md-3 col-sm-4 col-xs-6">' +
-      '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
-      '<img src="' + orderPokemonName[i].img + '" border="1">' + '<h3>' + orderPokemonName[i].name + '</h3>' +
-      '</div>' + '</article>';
-  }
-  document.getElementById('pokemon-list').innerHTML = showPokemonOrder;
+  document.getElementById('pokemon-list').innerHTML = template(orderPokemonName);
 });
 
 const namePokemon = document.getElementById('enter-text');
@@ -144,3 +115,14 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
     chart.draw(data, options);
   }
 });
+
+function template(arrayEvaluate) {
+  let showPokemonFilter = '';
+  for (let i = 0; i < arrayEvaluate.length; i++) {
+    showPokemonFilter += '<article class="col-md-3 col-sm-4 col-xs-6">' +
+      '<div class="pokemon col-md-12 col-sm-12 col-xs-12">' +
+      '<img src="' + arrayEvaluate[i].img + '" border="1" >' + '<h3>' + arrayEvaluate[i].name + '<br> #' + arrayEvaluate[i].num + '</h3>' +
+      '</div>' + '</article>';
+  }
+  return showPokemonFilter;
+}
