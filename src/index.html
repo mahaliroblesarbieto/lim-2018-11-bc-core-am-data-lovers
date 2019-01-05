@@ -5,12 +5,12 @@
     <title>Pokemon Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
     <div class="content container-fluid">
-      <header>
+      <aside>
         <div class="col-md-3 col-sm-4 col-xs-12">
           <nav class="col-md-12">
             <div class="navegador">
@@ -70,8 +70,20 @@
             </div>
           </nav>
         </div>
-      </header>
+      </aside>
       <section class="col-md-9 col-sm-8 col-xs-12">
+        <header>
+          <div>
+            <h4>Dashboard</h4>
+            <h1>Pokédex</h1>
+            <select class="type-order" id="pokemon-order">
+                <option value="" disabled selected>Ordenar por:</option>
+                <option value="number"># de Pokedex</option>
+                <option value="name-one">Nombre de A - Z</option>
+                <option value="name-two">Nombre de Z - A</option>
+              </select>
+          </div>
+        </header>
         <div class="row">
           <div id="pokemon-list">
             <!--Aquí se va mostrar imagen, nombre y numero que se esta llamando a partir de main.js-->
@@ -84,43 +96,43 @@
         <div class="site-container">
           <div>
             <div class="row">
-              <ul class="col-md-5">
-                <li class="col-md-2">
-                  <a href="http://www.nianticlabs.com">
-                    <img src="img/niantic_logo.png" alt="">
-                  </a>
-                </li>    
-                <li class="col-md-5">
-                  <a href="http://www.pokemon.com/us/">
-                    <img src="img/tpc_logo.png" alt="">
-                  </a>
-                </li>    
-                <li class="col-md-5">
-                  <a href="http://www.nintendo.com">
-                    <img src="img/nintendo_logo.png" alt="">
-                  </a>
-                </li>    
-              </ul>     
-            </div>
-            <div class="row">
               <ul class="col-md-7">
                 <li class="col-md-1">
                   <a href="https://twitter.com/PokemonGoApp">
                     <img src="img/twitter_logo.png" alt="Twitter">
-                  </a>   
-                </li>          
+                  </a>
+                </li>
                 <li class="col-md-1">
                   <a href="https://www.facebook.com/PokemonGO/">
                     <img src="img/facebook_logo.png" alt="Facebook">
                   </a>
-                </li>    
+                </li>
                 <li class="col-md-1">
                   <a href="https://plus.google.com/+pokemongo">
                     <img src="img/gplus_logo.png" alt="Google+">
-                  </a>           
-                </li>     
+                  </a>
+                </li>
               </ul>
-            </div>     
+            </div>
+          </div>
+          <div class="row">
+            <ul class="col-md-5">
+              <li class="col-md-2">
+                <a href="http://www.nianticlabs.com">
+                  <img src="img/niantic_logo.png" alt="">
+                </a>
+              </li>
+              <li class="col-md-5">
+                <a href="http://www.pokemon.com/us/">
+                  <img src="img/tpc_logo.png" alt="">
+                </a>
+              </li>
+              <li class="col-md-5">
+                <a href="http://www.nintendo.com">
+                  <img src="img/nintendo_logo.png" alt="">
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="row">
             <ul class="footer-links">
@@ -150,24 +162,3 @@
     <script src="main.js"></script>
   </body>
 </html>
-
-
-
-    
-  <!--  
-        
-        <section  class="col-md-9 col-sm-10 col-xs-12">
-           
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <select class="type-ordenar" id="pokemon-order">
-                  <option value="" disabled selected>Ordenar por:</option>
-                  <option value="number"># de Pokedex</option>
-                  <option value="name-one">Nombre de A - Z</option>
-                  <option value="name-two">Nombre de Z - A</option>
-                </select>
-            </div>
-        </section>
-
-
-    -->
-    
