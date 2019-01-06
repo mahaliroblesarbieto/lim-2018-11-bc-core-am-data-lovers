@@ -55,12 +55,12 @@ document.getElementById('button-calculate').addEventListener('click', () => {
   const candyCountMissing = pokemonFunction.computeStats(dataPokemon, namePokemonValue, candyCountValue);
   const arrFilter3 = window.POKEMON.pokemon.filter(compare => (compare.name === arrFilter2[0].next_evolution[0].name));
 
-  let pokemonEvolution = '<center>' +
+  let pokemonEvolution = 
    '<div class="pokemon-evolution ">' +
    '<img src="' + arrFilter2[0].img + '" border="1">' + '<h3> A tu ' + arrFilter2[0].name + ' le falta ' + candyCountMissing + ' caramelos para evolucionar a :</h3>' +
    '<img src="' + arrFilter3[0].img + '" border="1">' +
    '<h3> ' + arrFilter2[0].next_evolution[0].name + '</h3>' +
-   '</div>' + '</center>';
+   '</div>';
 
   document.getElementById('pokemon-list').innerHTML = pokemonEvolution;
 });
@@ -96,7 +96,7 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
 
     const options = {
       title: 'Promedio de debilidades por tipo de Pokémon de mayor a menor',
-      chartArea: {width: '80%'},
+      chartArea: {width: '70%'},
       hAxis: {
         viewWindowMode: 'explicit',
         viewWindow: {

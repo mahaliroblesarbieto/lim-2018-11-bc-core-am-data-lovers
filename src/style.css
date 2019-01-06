@@ -127,13 +127,32 @@ h3 {
 
 .pokemon-evolution {
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 2px;
 	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
 	color: #2B4D86;
 	font-size: 20px;
-	height: 400px;
+	width: 97%;
+	text-align: center;
 	margin-bottom: 30px;
+	margin: auto;
+	padding: 20px;
+	height: 506px;
+}
+
+.pokemon-evolution img {
+	width: 15% !important;
+}
+
+.min-heigth-table {
+	background: #ffffff;
+	border-radius: 2px;
+	box-shadow: 0 4px 7px rgba(0,0,0,0.16);
+	color: #2B4D86;
+	font-size: 20px;
 	width: 100%;
+	text-align: center;
+	padding: 20px;
+	height: 506px;
 }
 
 
@@ -143,7 +162,8 @@ h3 {
     background: linear-gradient(to right, #639d25, #427768);
     color: #fff;
     font-size: 12px;
-    line-height: 18px;
+	line-height: 18px;
+	margin-top: 60px;
     padding: 10px 0 30px;
 	text-align: center;
 }
@@ -153,10 +173,8 @@ footer li{
 }
 
 footer ul li img{
-  width: 30px;
+  width: 30px ;
 }
-
-
 
 footer .col-md-5 li:first-child img{
 	width: 60px !important;
@@ -170,30 +188,24 @@ footer .col-md-5 li:last-child img{
 	margin-top: 7%;
 }
 
-
-
-
-
 footer ul:first-child{
 	float: right;
-  }
+}
+    
+footer .col-md-5 li img{
+	width: 150px;
+}
   
-  
-  
-  footer .col-md-5 li img{
-	  width: 150px;
-  }
-  
-  footer .col-md-7 li{
-	  margin-top: 3%;
-  }
+footer .col-md-7 li{
+	margin-top: 3%;
+}
 
-
-
-
-
-ul.footer-links {
+footer .site-container .row:nth-child(2) {
     border-top: 1px solid white;
+}
+
+.footer-links{
+	float: none !important;
 }
 
 li.footer-links-item {
@@ -224,19 +236,25 @@ li.footer-links-item:first-child:after{
 
 /*responsive tablet*/
 
-@media only screen and (max-width: 767px){
-	section{
-		margin-top: 30px;
-	  }
-	  footer ul:first-child{
-	  float: none;
-	  }
+@media only screen and (max-width: 768px){
+	.pokemon {
+		font-size: 18px;
+		height: 150px;
+	}
+	.pokemon-evolution {
+		height: 280px;
+		width: 94%;
+	}
+
+	footer ul:first-child{
+		float: none;
+	}
 	
-	  li.col-md-1 {
+	li.col-md-1 {
 		display: inline;
-	  }
+	}
 	
-	 footer .col-md-5 li:nth-child(2) img{
+	footer .col-md-5 li:nth-child(2) img{
 		margin-top: 3%;
 	}
 	
@@ -244,12 +262,6 @@ li.footer-links-item:first-child:after{
 		margin-top: 2%;
 	}
 }
-
-
-
-
-
-
 
 @media only screen and (max-width: 414px){
 	#pokemon-list{
@@ -274,10 +286,20 @@ li.footer-links-item:first-child:after{
 		  top: 0 ;
 		  right: 0;
 	}
+	.pokemon-evolution {
+		height: 280px;
+		width: 91%;
+	}
+
+	.pokemon-evolution img {
+		width: 20% !important;
+	}
+	.min-heigth-table {
+		height: 500px;
+	}
+	footer ul {
+		padding-bottom: 15px;
+	}
+	  
 }
 
-.min-heigth-table {
-	height: 300px;
-	margin: 30px;
-	width: 100%;
-}
