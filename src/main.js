@@ -15,6 +15,7 @@ eggPokemon.addEventListener('change', () => {
 
 function filterEvaluate(typefilter, element) {
   let templateHtml;
+  // Este evento se llama para remover la clase de min-heigth-table que se creo para google charts
   document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   const typeofFilter = typefilter;
   const elementValue = element.value;
@@ -25,6 +26,7 @@ function filterEvaluate(typefilter, element) {
 
 const orderPokemon = document.getElementById('pokemon-order');
 orderPokemon.addEventListener('change', () => {
+  // Este evento se llama para remover la clase de min-heigth-table que se creo para google charts
   document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   const orderPokemonValue = orderPokemon.value;
   let order;
@@ -47,13 +49,13 @@ orderPokemon.addEventListener('change', () => {
 const namePokemon = document.getElementById('enter-text');
 const candyCount = document.getElementById('enter-number');
 document.getElementById('button-calculate').addEventListener('click', () => {
+  // Este evento se llama para remover la clase de min-heigth-table que se creo para google charts
   document.getElementById('pokemon-list').classList.remove('min-heigth-table');
   const namePokemonValue = namePokemon.value;
-  const arrFilter2 = window.POKEMON.pokemon.filter(compare => (compare.name === namePokemonValue));
+  const arrFilter2 = pokemonData.filter(compare => (compare.name === namePokemonValue));
   const candyCountValue = parseInt(candyCount.value);
-  const dataPokemon = window.POKEMON.pokemon;
-  const candyCountMissing = pokemonFunction.computeStats(dataPokemon, namePokemonValue, candyCountValue);
-  const arrFilter3 = window.POKEMON.pokemon.filter(compare => (compare.name === arrFilter2[0].next_evolution[0].name));
+  const candyCountMissing = pokemonFunction.computeStats(pokemonData, namePokemonValue, candyCountValue);
+  const arrFilter3 = pokemonData.filter(compare => (compare.name === arrFilter2[0].next_evolution[0].name));
 
   let pokemonEvolution = 
    '<div class="pokemon-evolution ">' +
