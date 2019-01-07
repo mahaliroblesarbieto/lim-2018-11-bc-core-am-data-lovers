@@ -1,8 +1,11 @@
-# POKÉMON GO
+# POKÉMON GO DASHBOARD
 
 ## Índice
 
+* [¡Regresa al mundo de los Pokémon!](#Regresa-al-mundo-de-los-Pokémon)
+* [Pokémon Go Dashboard](#Pokémon-Go-Dashboard)
 * [Definición del producto](#Definición-del-producto)
+* [Entrevistas](#[Entrevistas)
 * [Historias de usuario](#Historias-de-usuario)
 * [Prototipo de baja fidelidad o Sketch](#Prototipo-de-baja-fidelidad-o-Sketch)
 * [Prototipo de alta fidelidad o Diseño de la interfaz de usuario](#Prototipo-de-alta-fidelidad-o-Diseño-de-la-interfaz-de-usuario)
@@ -10,42 +13,68 @@
 
 ***
 
+## ¡Regresa al mundo de los Pokémon!
+
+Pokémon Go ha causado sensación desde el día de su lanzamiento, atrayendo a jóvenes y adultos a este nuevo mundo virtual por medio de la realidad aumentada.
+De acuerdo con el concepto original, los entrenadores buscan capturar Pokémon hasta completar una colección. El otro objetivo es adiestrarlos para que ganen batallas frente a otras criaturas.
+El juego ha conseguido superar los 65 millones de usuarios al día y ha generado aglomeraciones en las ciudades. Pero, ¿por qué este juego ha causado tanto impacto en los usuarios?
+La idea de llegar a convertirse en un maestro Pokémon es un feeling con el que ha crecido toda una generación, Pokémon Go te permite vivir la experiencia de un verdadero entrenador pokémon.
+
+
+## Pokémon Go Dashboard
+
+Pokémon Go Dashboard es una herramienta de ayuda para todos los usuarios de Pokémon Go, ya que te permite hacer, desde una búsqueda específica de un Pokémon, filtrarlos por tipo y tipo de huevo. Hacer un cálculo real de caramelos que le falta a tu Pokémon para llegar a la siguiente evolución, también se podré ver tablas estadísticas según el promedio de debilidades por tipo de Pokémon.
+
+
 ## Definición del producto
 
 1. ¿Quiénes son los principales usuarios de producto?
 
-Jugadores habituales de Pokémon Go.
+    Jugadores de Pokémon Go.
 
 2. ¿Cuáles son los objetivos de los usuarios?
 
-Obtener información específica sobre los pokémon que se encuentran en el juego.
+    Obtener información específica sobre los pokémon que se encuentran en el juego.
 
 3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-- Tipos de pokémon.
-- Que pokémon se puede obtener según el tipo de huevo.
-- Cantidad de caramelos que se necesita para evolucionar un pokémon.
-- Poder ordenar los pokémon según número de Pokédex.
-- Poder ordenar los pokémon según orden alfabético de A-Z y Z-A.
-
-
+    - Tipos de pokémon.
+    - Que pokémon se puede obtener según el tipo de huevo.
+    - Cantidad de caramelos que se necesita para evolucionar un pokémon.
+    - Poder ordenar los pokémon según número de Pokédex.
+    - Poder ordenar los pokémon según orden alfabético de A-Z y Z-A.
 
 4. ¿Cuándo utilizan o utilizarían el producto?
 
-Cuando quieran obtener información de un pokémon en específico.
+    Cuando quieran obtener información de un pokémon en específico.
 
-5. ¿Cómo fue el proceso de diseño?
-
--    Se eligió, con que data ibamos a trabajar, en este caso elegimos la data de Pokémon.
--    Se eligió quienes serán los principales usuarios del producto, para ello se procedió a revisar qué información tenía la data de Pokémon, cuando se revisó la data nos dimos cuenta que la información que tenía era sobre el juego Pokémon Go en específico, por ello se decidió que nuestros usuarios serían los jugadores de Pokémon Go. 
--    Se realizaron entrevistas a las personas que sean Jugadores de Pokémon Go, antes de realizar la entrevista, se le avisó a la persona que la entrevista sería grabada y que queríamos que nos explicara o nos hablara sobre qué información le parece importante o necesaria encontrar en una página web sobre el juego Pokémon Go.
--    Según las grabaciones de las entrevistas se realizaron las Historias de Usuario.
--    Se realizaron los prototipos de baja fidelidad según las Historias de Usuario.
--    Se realizaron los prototipos de alta fidelidad, tomando en cuenta los prototipos de baja fidelidad.
-
-6. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
+5. ¿Cómo crees que el producto resuelve el problema que tiene tu usuario?
 
 El presente proyecto soluciona la necesidad del usuario de acceder fácilmente a informacion específica sobre los pokémon que se encuentran en el juego Pokémon Go.
+
+
+## Entrevistas
+
+Para la elaboración de las entrevistas, escogimos a usuarios habituales de Pokémon Go para que nos respondan las siguientes preguntas:
+
+1. ¿Cuál es su objetivo con el juego?
+
+    - Atrapar todos los pokémon.
+    - Capturar los 150 pokemones originales.
+
+2. ¿Que datos son los más importantes en el juego?
+
+    - La fecha de inicio del juego, la cantidad de experiencia que tienes, la cantidad de Pokémon es que tienes. 
+    - El poder del Pokémon que capturas, cuantos Pokémon tienes.
+    - En que zonas hay mas posibilidad de encontrar ciertos Pokémon.
+
+
+3. ¿Qué datos les gustaría comparar o filtrar?
+
+    - Ver que ataques son mas efectivos contra otros Pokémon.
+    - Cantidad de experiencia que ganas por día, cantidad de Pokémon (nuevos, únicos, todos) que atrapas por día y poder definir rangos de fecha para los reportes (tipo analytics)
+    - Me gustaría poder poner mis Pokémon destacados primero, para elegir fácil cuando peleas, poder filtrar por tipo (eléctrico, de agua, etc), y poder tener duelos fuera de los gimnasios.
+
 
 ## Historias de usuario
 
