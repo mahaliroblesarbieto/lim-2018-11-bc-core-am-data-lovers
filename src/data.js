@@ -37,15 +37,15 @@ function computeStats(data, condition, count) {
 }
 
 function stats(data, condition) {
-  let arrPromedio = [];
+  let arrAverage = [];
   for (let i = 0; i < condition.length; i++) {
     const arrFilterPokemonType = data.filter(compare => (compare.type[0] === condition[i] || compare.type[1] === condition[i]));
     const totalWeaknesses = arrFilterPokemonType.reduce(
       (total, pokemon) => total + (pokemon.weaknesses.length), 0);
-    const promedio = totalWeaknesses / arrFilterPokemonType.length;
-    arrPromedio.push(promedio);
+    const Average = totalWeaknesses / arrFilterPokemonType.length;
+    arrAverage.push(Average);
   }
-  return arrPromedio;
+  return arrAverage;
 }
 
 window.pokemonFunction = {
