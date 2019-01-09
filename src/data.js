@@ -55,3 +55,4 @@ window.pokemonFunction = {
   stats,
 };
 
+
