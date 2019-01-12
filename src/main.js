@@ -1,6 +1,17 @@
-const pokemonData = window.POKEMON.pokemon;
-const pokemonFunction = window.pokemonFunction;
+fetch("https://raw.githubusercontent.com/Laboratoria/lim-2018-11-bc-core-am-data-lovers/master/src/data/pokemon/pokemon.json")
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  let pokemon = data.pokemon;
+  contentfunction(pokemon)
+})
+.catch((error) => {
+  alert('Hubo un problema con la petición Fetch:' + error.message)
+})
 
+function contentfunction(pokemonData){
+const pokemonFunction = window.pokemonFunction;
 document.getElementById('pokemon-list').innerHTML = template(pokemonData);
 
 const typePokemon = document.getElementById('pokemon-type');
@@ -128,3 +139,9 @@ function template(arrayEvaluate) {
   }
   return showPokemonFilter;
 }
+}
+
+
+
+
+

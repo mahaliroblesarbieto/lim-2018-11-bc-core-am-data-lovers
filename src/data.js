@@ -54,5 +54,3 @@ window.pokemonFunction = {
   computeStats,
   stats,
 };
-
-
