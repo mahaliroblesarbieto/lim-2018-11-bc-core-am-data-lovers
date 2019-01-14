@@ -2,7 +2,14 @@ function filterData(data, filterBy, condition) {
   let listIdPokemonType = [];
   switch (filterBy) {
   case 'Tipo':
-    listIdPokemonType = data.filter(compare => (compare.type[0] === condition || compare.type[1] === condition));
+    listIdPokemonType = data.filter((compare) => {
+      for (let i = 0 ; i < compare.type.length ; i++){
+      if(compare.type[i] === condition){
+       return true;
+      }else{
+        return false;
+      }
+    }}); 
     break;
   case 'Huevo':
     listIdPokemonType = data.filter(compare => (compare.egg === condition));
@@ -29,7 +36,7 @@ function sortData(data, sortBy, condition) {
   }
   return listPokemonOrder;
 }
-
+ 
 function computeStats(data, condition, count) {
   const nameFilter = data.filter(compare => (compare.name === condition));
   const newCandy = nameFilter[0].candy_count - count;
