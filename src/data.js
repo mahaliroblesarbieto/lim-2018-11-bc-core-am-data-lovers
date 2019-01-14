@@ -2,20 +2,14 @@ function filterData(data, filterBy, condition) {
   let listIdPokemonType = [];
   switch (filterBy) {
   case 'Tipo':
-    listIdPokemonType = data.filter((compare) => {
-      for (let i = 0 ; i < compare.type.length ; i++){
-      if(compare.type[i] === condition){
-       return true;
-      }else{
-        return false;
-      }
-    }}); 
+    listIdPokemonType = data.filter(compare => (compare.type.includes(condition))) 
     break;
   case 'Huevo':
     listIdPokemonType = data.filter(compare => (compare.egg === condition));
     break;
   default:
   }
+  console.log(listIdPokemonType);
   return listIdPokemonType;
 }
 
