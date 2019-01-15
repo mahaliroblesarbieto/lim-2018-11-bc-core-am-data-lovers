@@ -91,10 +91,8 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
   const showData =  [['Tipo de Pokémon', 'Promedio de Debilidades', {role: 'style'}]];
 
   for (let i = 0 ; i < arrTypeColor.length ; i++) {
-    showData.push([arrTypeColor[i][0], arrPromedioSortReverse[i], arrTypeColor[i][1]]);
-    
+    showData.push([arrTypeColor[i][0], arrPromedioSortReverse[i], arrTypeColor[i][1]]);  
   }
-
 
   google.charts.load('current', {packages: ['corechart', 'bar']});
   google.charts.setOnLoadCallback(drawBasic);
