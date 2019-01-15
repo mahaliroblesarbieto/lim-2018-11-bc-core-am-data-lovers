@@ -9,7 +9,6 @@ function filterData(data, filterBy, condition) {
     break;
   default:
   }
-  console.log(listIdPokemonType);
   return listIdPokemonType;
 }
 
