@@ -2,7 +2,7 @@ function filterData(data, filterBy, condition) {
   let listIdPokemonType = [];
   switch (filterBy) {
   case 'Tipo':
-    listIdPokemonType = data.filter(compare => (compare.type.includes(condition))) 
+    listIdPokemonType = data.filter(compare => (compare.type.includes(condition))); 
     break;
   case 'Huevo':
     listIdPokemonType = data.filter(compare => (compare.egg === condition));
