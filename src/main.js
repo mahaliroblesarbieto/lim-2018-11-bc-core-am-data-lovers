@@ -80,27 +80,20 @@ document.getElementById('button-calculate').addEventListener('click', () => {
 
 document.getElementById('button-weaknesses').addEventListener('click', () => {
   const arrTypePokemon = ['Water', 'Bug', 'Dragon', 'Electric', 'Ghost', 'Fire', 'Ice', 'Fighting', 'Normal', 'Grass', 'Psychic', 'Rock', 'Ground', 'Poison', 'Flying'];
-  const arrPromedioStats = pokemonFunction.stats(pokemonData, arrTypePokemon);
-  const arrPromedioSort = arrPromedioStats.sort();
-  const arrPromedioSortReverse = arrPromedioSort.reverse();
+  const arrPromedioSortReverse = ((pokemonFunction.stats(pokemonData, arrTypePokemon)).sort()).reverse();
   const arrTypeColor = [['Roca','color: #414449'],['Hierba','color: #558720'],['Tierra','color: #671502'],
   ['Hielo','color: #6c72f3'],['Bicho','color: #16d45d'],['Psíquico', 'color: #af5ed9'],['Fantasma','color: #612baa'],
   ['Dragón','color: #612baa'],['Veneno','color: #4d215e'],['Lucha','color: #fc1f1f'],['Fuego','color: #ff8400'],
   ['Volador','color: #45a4a3'],['Agua','color: #a2def4'],['Eléctrico','color: #faf329'],['Normal','color: #a8aaae']]
-
   const showData =  [['Tipo de Pokémon', 'Promedio de Debilidades', {role: 'style'}]];
-
   for (let i = 0 ; i < arrTypeColor.length ; i++) {
     showData.push([arrTypeColor[i][0], arrPromedioSortReverse[i], arrTypeColor[i][1]]);  
   }
-
   google.charts.load('current', {packages: ['corechart', 'bar']});
   google.charts.setOnLoadCallback(drawBasic);
 
-  function drawBasic() {
-    
+  function drawBasic() { 
     const data = google.visualization.arrayToDataTable(showData);
-
     const options = {
       title: 'Promedio de debilidades por tipo de Pokémon de mayor a menor',
       chartArea: {width: '70%'},
@@ -116,7 +109,6 @@ document.getElementById('button-weaknesses').addEventListener('click', () => {
       },
       legend: {position: 'none'}
     };
-
     const chart = new google.visualization.BarChart(document.getElementById('pokemon-list'));
     document.getElementById('pokemon-list').classList.add('min-heigth-table');
     chart.draw(data, options);
